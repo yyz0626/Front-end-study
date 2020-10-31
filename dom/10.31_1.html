@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #container {
+            width: 750px;
+            margin: 50px auto;
+            position: relative;
+        }
+
+        #img-box img {
+            display: none;
+        }
+
+        #img-box img:first-child {
+            display: block;
+        }
+
+        #img-box img :nth-child(2) {
+            display: block;
+        }
+
+        #lab {
+            position: absolute;
+            right: 50px;
+            bottom: 40px;
+        }
+
+        #lab li {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            text-align: center;
+            line-height: 20px;
+            color: white;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        #lab li.actived {
+            background: rgba(255, 0, 0, 0.6);
+        }
+
+        .btn {
+            display: inline-block;
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            line-height: 45px;
+            top: 50%;
+            margin-top: -25px;
+            /* top: calc(50% - 25px); */
+            cursor: pointer;
+        }
+
+        #prev {
+            left: 0;
+        }
+
+        #next {
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="img-box">
+            <img src="imgs/1.jpg">
+            <img src="imgs/2.jpg">
+            <img src="imgs/3.jpg">
+            <img src="imgs/4.jpg">
+            <img src="imgs/5.jpg">
+        </div>
+        <ul id="lab">
+            <li class="actived">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+        <span id="prev" class="btn">&lt;</span>
+        <span id="next" class="btn">&gt;</span>
+    </div>
+
+</body>
+
+<script>
+    var oPrev = document.getElementById("prev");
+    var oNext = document.getElementById("next");
+    oNext.onclick = function () {
+        alert(11)
+    }
+</script>
+
+</html>
